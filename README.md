@@ -79,16 +79,6 @@ class madmis\ExchangeApi\Exception\ClientException {
 }
 ```
 
-So, to handle errors use try/catch
-
-```php
-try {
-    $api->signed()->activeOrders(Http::PAIR_ETHUAH, true);
-} catch (madmis\ExchangeApi\Exception\ClientException $ex) {
-    // any actions (log error, send email, ...) 
-}
-``` 
-
 
 ## Running the tests
 To run the tests, you'll need to install [phpunit](https://phpunit.de/). 
