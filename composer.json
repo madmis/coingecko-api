@@ -1,0 +1,28 @@
+{
+    "name": "madmis/coingecko-api",
+    "description": "Coingecko REST API php client",
+    "keywords": [
+        "Coingecko",
+        "rest",
+        "api"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^7.1",
+        "doctrine/annotations": "^1.4",
+        "symfony/options-resolver": "^3.3",
+        "madmis/exchange-api": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "madmis\\": "src",
+            "Test\\": "tests"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^6.2",
+        "symfony/console": "^3.3"
+    }
+}

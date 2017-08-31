@@ -1,0 +1,33 @@
+language: php
+
+sudo: false
+
+php:
+    - 7.1
+
+before_install:
+    - composer self-update
+
+install:
+    - composer install
+    - composer require satooshi/php-coveralls
+
+before_script:
+    - mkdir -p build/logs
+
+script:
+    - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+    - php vendor/bin/coveralls -v
+
+matrix:
+    fast_finish: true
+
+notifications:
+    email:
+        recipients:
+            - madmis@inbox.ru
+        on_success: never
+        on_failure: always
+
